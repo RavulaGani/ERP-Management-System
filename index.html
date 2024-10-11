@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP Signup</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="script/script.js" defer></script>
+    <st>
+         /* Style for the video to make it cover the background */
+         body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the video covers the screen */
+            z-index: -1; /* Keeps video behind other content */
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding-top: 20%;
+        }
+    </style>
+</head>
+<body>
+     <!-- Background Video -->
+     <video class="bg-video" autoplay muted loop>
+        <source src="assets/0820 (1).mp4"  type="video/mp4" alt="Sathyabama University">
+     </video>
+    <div class="signup-container">
+        <h1>ERP User Signup</h1>
+        <form action="signup.php" method="POST" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="reg_no">Register Number:</label>
+            <input type="text" id="reg_no" name="reg_no" required>
+
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year" required>
+
+            <label for="section">Section:</label>
+            <input type="text" id="section" name="section" required>
+
+            <label for="phone">Phone No:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <button type="submit" name="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>
